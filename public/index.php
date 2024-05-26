@@ -29,17 +29,13 @@ $middleware($app);
 $routes = require __DIR__ . '/../src/routes.php';
 $routes($app);
 
-$getMhsPayment = require __DIR__ . '/../src/getMhsPayment.php';
-$getMhsPayment($app);
+require __DIR__ . '/../controllers/getMhsPayment.php';
 
-$createMhsPayment = require __DIR__ . '/../src/createMhsPayment.php';
-$createMhsPayment($app);
+require __DIR__ . '/../controllers/createMhsPayment.php';
 
-$updateMhsPayment = require __DIR__ . '/../src/updateMhsPayment.php';
-$updateMhsPayment($app);
+require __DIR__ . '/../controllers/updateMhsPayment.php';
 
-$delMhsPayment = require __DIR__ . '/../src/delMhsPayment.php';
-$delMhsPayment($app);
+require __DIR__ . '/../controllers/delMhsPayment.php';
 
 // Run app
 $app->run();
