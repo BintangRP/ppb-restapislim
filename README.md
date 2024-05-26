@@ -6,29 +6,55 @@ This skeleton application was built for Composer. This makes setting up a new Sl
 
 ## Install the Application
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+1. Download zip or git clone this repository
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+```
+git clone https://github.com/BintangRP/ppb-restapislim
+```
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+2. using xampp
+   locate folder in ur xampp
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
+```
+Path: xampp/htdocs/ppb-restapislim
+```
 
-To run the application in development, you can run these commands 
+3. start xampp
 
-	cd [my-app-name]
-	php composer.phar start
-	
-Or you can use `docker-compose` to run the app with `docker`, so you can run these commands:
+-    start apacha
+-    start mysql
 
-         cd [my-app-name]
-	 docker-compose up -d
-After that, open `http://0.0.0.0:8080` in your browser.
+4. import sql database
 
-Run this command in the application directory to run the test suite
+```
+using kelas_api_ppb.sql (import in Phpmyadmin)
+```
 
-	php composer.phar test
+5. getting api from
+   http://localhost/ppb-restapislim/public/{endpoint}
 
-That's it! Now go build something cool.
-"# restapislim" 
+-    GET: mahasiswa/pembayaran (Get all data pembayaran mahasiswa)
+-    POST: mahasiswa/edit (Create new mahasiswa)
+-    PUT: mahasiswa/edit (Update mahasiswa)
+-    DEL: mahasiswa/edit (Delete mahasiswa)
+
+## table mahasiswa and spp_mahasiswa
+
+```
+table mahasiswa{
+	nim int(11),
+  	nama text,
+  	jk varchar(10),
+  	umur int(11)
+}
+```
+
+```
+table spp_mahasiswa{
+	id int(11),
+	nim int(11),
+	jumlah int(11),
+	status int(11),
+	semester int(11)
+}
+```
